@@ -15,7 +15,7 @@
 <main class="signup-layout">
   <section class="visual-panel">
     <div class="photo"></div><div class="visual-shade"></div>
-    <a class="auth-logo" href="index.html" aria-label="Stackly â€” home">
+    <a class="auth-logo" href="index.html" aria-label="Stackly — home">
       <img src="images/logo/logo.webp" alt="Stackly">
     </a>
     <div class="red-corner red-bottom"></div>
@@ -37,21 +37,22 @@
         <h2>Create An Account</h2>
         <p>Start your journey with Stackly in a few simple steps.</p>
       </header>
-      <button class="google-button" type="button" data-message="registerMessage"><span class="google-g">G</span>Sign up with Google</button>
+      <a class="google-button" href="#" data-message="registerMessage"><span class="google-g">G</span>Sign up with Google</a>
       <div class="separator"><span></span><b>Or</b><span></span></div>
       <form id="registerForm" novalidate>
         <label class="input-wrap">
           <span class="sr-only">Account role</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></svg>
           <select id="registerRole" name="role" aria-describedby="registerMessage" required>
-            <option value="client" selected>Client</option>
+            <option value="" disabled selected>Select your role</option>
+            <option value="client">Client</option>
             <option value="admin">Admin</option>
           </select>
         </label>
         <label class="input-wrap">
           <span class="sr-only">Full name</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></svg>
-          <input id="registerName" type="text" placeholder="Type your name" autocomplete="name" aria-describedby="registerMessage" required>
+          <input id="registerName" type="text" placeholder="Type your name (letters only, max 16)" maxlength="16" autocomplete="name" aria-describedby="registerMessage" required>
         </label>
         <label class="input-wrap">
           <span class="sr-only">Email address</span>
@@ -59,9 +60,9 @@
           <input id="registerEmail" type="email" placeholder="Enter your Email" autocomplete="email" aria-describedby="registerMessage" required>
         </label>
         <label class="input-wrap">
-          <span class="sr-only">Password (minimum 8 characters)</span>
+          <span class="sr-only">Password (strong: 8+ characters with uppercase, lowercase, number and special character)</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2"/></svg>
-          <input id="registerPassword" type="password" placeholder="Password (min. 8 characters)" autocomplete="new-password" minlength="8" aria-describedby="registerMessage" required>
+          <input id="registerPassword" type="password" placeholder="Password (strong: 8+ chars)" autocomplete="new-password" minlength="8" aria-describedby="registerMessage" required>
           <button class="toggle-password" type="button" data-target="registerPassword" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
         </label>
         <label class="input-wrap">

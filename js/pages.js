@@ -172,25 +172,49 @@
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
+      /* Name: letters only, maximum 16 characters. */
+      const namePattern = /^[A-Za-z]{1,16}$/;
       const name = nameField ? nameField.value.trim() : "";
       const email = emailField ? emailField.value.trim() : "";
       const message = messageField ? messageField.value.trim() : "";
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      const emailPattern = /^[A-Za-z][A-Za-z0-9]*@[A-Za-z][A-Za-z0-9]*(\.[A-Za-z][A-Za-z0-9]*)*\.[A-Za-z]{2,}$/;
 
-      markInvalid(nameField, !name);
+      markInvalid(nameField, !namePattern.test(name));
       markInvalid(emailField, !emailPattern.test(email));
       markInvalid(messageField, !message);
 
       if (!name) {
+        alert("Please tell us your name.");
         formMessage.setAttribute("data-state", "error");
         formMessage.textContent = "Please tell us your name.";
         if (nameField) nameField.focus();
         return;
       }
 
-      if (!emailPattern.test(email)) {
+      if (!namePattern.test(name)) {
+        const nameError =
+          name.length > 16
+            ? "Name can only be up to 16 characters."
+            : "Name can only contain letters (no numbers, spaces or special characters).";
+        alert(nameError);
         formMessage.setAttribute("data-state", "error");
-        formMessage.textContent = "Please enter a valid work email.";
+        formMessage.textContent = nameError;
+        if (nameField) nameField.focus();
+        return;
+      }
+
+      if (!email) {
+        alert("Please enter your work email.");
+        formMessage.setAttribute("data-state", "error");
+        formMessage.textContent = "Please enter your work email.";
+        if (emailField) emailField.focus();
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("Invalid email. Use a valid email like sun@gmail.com or sun122@gmail.com.");
+        formMessage.setAttribute("data-state", "error");
+        formMessage.textContent = "Invalid email. Use a valid email like sun@gmail.com or sun122@gmail.com.";
         if (emailField) emailField.focus();
         return;
       }

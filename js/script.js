@@ -6,7 +6,15 @@
 (function () {
   "use strict";
 
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  /* Valid email IDs:   sun@gmail.com, sun122@gmail.com
+     Invalid email IDs: sun@123.com, sun@123hhd.com (the domain must
+     start with a letter; the local part starts with a letter and can
+     contain letters and digits only). */
+  const emailPattern = /^[A-Za-z][A-Za-z0-9]*@[A-Za-z][A-Za-z0-9]*(\.[A-Za-z][A-Za-z0-9]*)*\.[A-Za-z]{2,}$/;
+
+  /* Name: letters only, maximum 16 characters. Numbers, spaces and
+     special characters are not allowed. */
+  const namePattern = /^[A-Za-z]{1,16}$/;
 
   /* ---------- Password visibility ---------- */
 
@@ -56,6 +64,25 @@
     }
   }
 
+  /* Failed check: alert the user and show the inline message. */
+  function fail(input, message, text) {
+    alert(text);
+    setMessage(message, text, "error");
+    if (input) input.focus();
+  }
+
+  /* Strong password: at least 8 characters with an uppercase letter,
+     a lowercase letter, a number and a special character. Returns ""
+     when the password is strong, otherwise the reason it is not. */
+  function getPasswordError(value) {
+    if (value.length < 8) return "Password must be at least 8 characters long.";
+    if (!/[A-Z]/.test(value)) return "Password must contain at least one uppercase letter (A-Z).";
+    if (!/[a-z]/.test(value)) return "Password must contain at least one lowercase letter (a-z).";
+    if (!/[0-9]/.test(value)) return "Password must contain at least one number (0-9).";
+    if (!/[^A-Za-z0-9]/.test(value)) return "Password must contain at least one special character (e.g. !@#$%).";
+    return "";
+  }
+
   /* ---------- Registration ---------- */
 
   const registerForm = document.getElementById("registerForm");
@@ -78,57 +105,70 @@
       const emailValue = email ? email.value.trim() : "";
       const roleValue = role ? role.value : "";
       const passwordValue = password ? password.value : "";
+      const passwordError = getPasswordError(passwordValue);
       const confirmValue = confirm ? confirm.value : "";
       const accepted = terms ? terms.checked : true;
 
-      markInvalid(name, !nameValue);
-      markInvalid(email, !emailPattern.test(emailValue));
+      markInvalid(name, !namePattern.test(nameValue));
+      markInvalid(email, !emailValue || !emailPattern.test(emailValue));
       markInvalid(role, roleValue !== "client" && roleValue !== "admin");
-      markInvalid(password, passwordValue.length < 8);
+      markInvalid(password, Boolean(passwordError));
       if (confirm) markInvalid(confirm, confirmValue !== passwordValue || !confirmValue);
       markInvalid(terms, !accepted);
 
+      if (roleValue !== "client" && roleValue !== "admin") {
+        fail(role, registerMessage, "Please select your role (Client or Admin).");
+        return;
+      }
+
       if (!nameValue) {
-        setMessage(registerMessage, "Please enter your full name.", "error");
-        name?.focus();
+        fail(name, registerMessage, "Please enter your name.");
+        return;
+      }
+
+      if (!namePattern.test(nameValue)) {
+        fail(
+          name,
+          registerMessage,
+          nameValue.length > 16
+            ? "Name can only be up to 16 characters."
+            : "Name can only contain letters (no numbers, spaces or special characters)."
+        );
+        return;
+      }
+
+      if (!emailValue) {
+        fail(email, registerMessage, "Please enter your email.");
         return;
       }
 
       if (!emailPattern.test(emailValue)) {
-        setMessage(registerMessage, "Please enter a valid email address.", "error");
-        email?.focus();
+        fail(email, registerMessage, "Invalid email. Use a valid email like sun@gmail.com or sun122@gmail.com.");
         return;
       }
 
-      if (roleValue !== "client") {
-        setMessage(registerMessage, "New accounts can only be registered as Client.", "error");
-        role?.focus();
-        return;
-      }
-
-      if (passwordValue.length < 8) {
-        setMessage(registerMessage, "Password must be at least 8 characters.", "error");
-        password?.focus();
+      if (passwordError) {
+        fail(password, registerMessage, passwordError);
         return;
       }
 
       if (confirm && confirmValue !== passwordValue) {
-        setMessage(registerMessage, "Passwords do not match. Please try again.", "error");
-        confirm.focus();
+        fail(confirm, registerMessage, "Passwords do not match. Please try again.");
         return;
       }
 
       if (!accepted) {
-        setMessage(registerMessage, "Please agree to the Terms and Privacy.", "error");
-        terms?.focus();
+        fail(terms, registerMessage, "Please agree with the Terms and Privacy.");
         return;
       }
 
       setMessage(
         registerMessage,
-        "Account details validated. Connect your signup API to create the account.",
+        "Account created successfully. Redirecting to the sign-in page...",
         "success"
       );
+
+      window.location.href = "login.html";
     });
   }
 
@@ -141,6 +181,7 @@
     const email = document.getElementById("loginEmail");
     const role = document.getElementById("loginRole");
     const password = document.getElementById("loginPassword");
+    const remember = document.getElementById("rememberMe");
 
     clearOnInput(loginForm, loginMessage);
 
@@ -150,44 +191,57 @@
       const emailValue = email ? email.value.trim() : "";
       const roleValue = role ? role.value : "";
       const passwordValue = password ? password.value : "";
+      const passwordError = getPasswordError(passwordValue);
+      const remembered = remember ? remember.checked : true;
 
-      markInvalid(email, !emailPattern.test(emailValue));
+      markInvalid(email, !emailValue || !emailPattern.test(emailValue));
       markInvalid(role, roleValue !== "admin" && roleValue !== "client");
-      markInvalid(password, !passwordValue);
-
-      if (!emailPattern.test(emailValue)) {
-        setMessage(loginMessage, "Please enter a valid email address.", "error");
-        email?.focus();
-        return;
-      }
+      markInvalid(password, Boolean(passwordError));
+      markInvalid(remember, !remembered);
 
       if (roleValue !== "admin" && roleValue !== "client") {
-        setMessage(loginMessage, "Please select a valid account role.", "error");
-        role?.focus();
+        fail(role, loginMessage, "Please select your role (Client or Admin).");
         return;
       }
 
-      if (!passwordValue) {
-        setMessage(loginMessage, "Please enter your password.", "error");
-        password?.focus();
+      if (!emailValue) {
+        fail(email, loginMessage, "Please enter your email.");
+        return;
+      }
+
+      if (!emailPattern.test(emailValue)) {
+        fail(email, loginMessage, "Invalid email. Use a valid email like sun@gmail.com or sun122@gmail.com.");
+        return;
+      }
+
+      if (passwordError) {
+        fail(password, loginMessage, passwordError);
+        return;
+      }
+
+      if (!remembered) {
+        fail(remember, loginMessage, "Please select the Remember me checkbox.");
         return;
       }
 
       setMessage(
         loginMessage,
-        "Sign-in details validated for the " + (roleValue === "admin" ? "Admin" : "Client") + " role. Connect your authentication API to continue.",
+        "Sign-in successful. Redirecting to your " + (roleValue === "admin" ? "Admin" : "Client") + " dashboard...",
         "success"
       );
+
+      window.location.href = roleValue === "admin" ? "admin-dashboard.html" : "client-dashboard.html";
     });
   }
 
   /* ---------- Google OAuth placeholders ---------- */
 
-  document.querySelectorAll(".google-button").forEach(function (button) {
-    button.addEventListener("click", function () {
-      const messageId = button.getAttribute("data-message");
+  document.querySelectorAll(".google-button").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const messageId = link.getAttribute("data-message");
       const message = messageId ? document.getElementById(messageId) : null;
-      const isSignup = /sign up/i.test(button.textContent);
+      const isSignup = /sign up/i.test(link.textContent);
       setMessage(
         message,
         "Connect Google OAuth here to enable Google " + (isSignup ? "sign-up." : "sign-in."),

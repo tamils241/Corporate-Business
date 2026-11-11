@@ -15,7 +15,7 @@
 <main class="signup-layout">
   <section class="visual-panel">
     <div class="photo"></div><div class="visual-shade"></div>
-    <a class="auth-logo" href="index.html" aria-label="Stackly â€” home">
+    <a class="auth-logo" href="index.html" aria-label="Stackly — home">
       <img src="images/logo/logo.webp" alt="Stackly">
     </a>
     <div class="red-corner red-bottom"></div>
@@ -37,14 +37,15 @@
         <h2>Welcome Back</h2>
         <p>Sign in to your Stackly account.</p>
       </header>
-      <button class="google-button" type="button" data-message="loginMessage"><span class="google-g">G</span>Sign in with Google</button>
+      <a class="google-button" href="#" data-message="loginMessage"><span class="google-g">G</span>Sign in with Google</a>
       <div class="separator"><span></span><b>Or</b><span></span></div>
       <form id="loginForm" novalidate>
         <label class="input-wrap">
           <span class="sr-only">Account role</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></svg>
           <select id="loginRole" name="role" aria-describedby="loginMessage" required>
-            <option value="client" selected>Client</option>
+            <option value="" disabled selected>Select your role</option>
+            <option value="client">Client</option>
             <option value="admin">Admin</option>
           </select>
         </label>
@@ -61,7 +62,7 @@
         </label>
         <div class="form-row">
           <label class="remember"><input id="rememberMe" type="checkbox"><span>Remember me</span></label>
-          <a class="forgot-link" href="#">Forgot password?</a>
+          <a class="forgot-link" href="404.html">Forgot password?</a>
         </div>
         <p class="form-message" id="loginMessage" role="status" aria-live="polite"></p>
         <button class="submit-button" type="submit">Sign in</button>
