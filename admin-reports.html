@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Stackly | Admin Reports</title>
+  <meta name="description" content="Review Stackly workspace performance and project reports.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="dashboard-skip" href="#mainContent">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Admin navigation">
+      <a class="dashboard-brand" href="index.html" aria-label="Stackly home"><img src="images/logo/logo.webp" alt="Stackly"><span>Workspace</span></a>
+      <div class="sidebar-label">ADMIN MENU</div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="admin-dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a class="sidebar-link" href="admin-projects.html"><span class="nav-icon" aria-hidden="true">▦</span>Projects</a>
+        <a class="sidebar-link" href="admin-clients.html"><span class="nav-icon" aria-hidden="true">♙</span>Clients</a>
+        <a class="sidebar-link is-active" href="admin-reports.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▥</span>Reports</a>
+        <a class="sidebar-link" href="admin-settings.html"><span class="nav-icon" aria-hidden="true">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>Our team is here to help you.</p><a href="contact.html">Contact support <span aria-hidden="true">→</span></a></div>
+        <a class="sidebar-link sign-out-link" href="login.html"><span class="nav-icon" aria-hidden="true">↪</span>Sign out</a>
+      </div>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="sidebar-toggle" type="button" aria-label="Open navigation menu" aria-controls="dashboardSidebar" aria-expanded="false" data-sidebar-toggle><span></span><span></span><span></span></button>
+        <div class="topbar-context"><span class="topbar-eyebrow">Workspace</span><strong>Reports</strong></div>
+        <div class="topbar-actions"><a class="topbar-home" href="index.html">View website <span aria-hidden="true">↗</span></a><div class="user-chip"><span class="user-avatar user-avatar--admin" aria-hidden="true">AD</span><span class="user-chip-copy"><strong>Administrator</strong><small>Admin account</small></span></div></div>
+      </header>
+      <main class="dashboard-content" id="mainContent">
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Dashboard preview</strong> — report metrics shown here are illustrative sample data.</p></div>
+        <section class="page-heading">
+          <div><p class="page-kicker">WORKSPACE PERFORMANCE</p><h1>Reports</h1><p>Monitor project delivery, client growth, and business performance.</p></div>
+          <span class="period-label">November 2026</span>
+        </section>
+        <section class="stats-grid" aria-label="Monthly report metrics">
+          <article class="stat-card"><div class="stat-top"><span>Revenue</span><span class="stat-icon stat-icon--green" aria-hidden="true">$</span></div><strong class="stat-value">$42,850</strong><p><span class="trend-up">↑ 8.6%</span> <span>vs. last month</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Projects delivered</span><span class="stat-icon stat-icon--blue" aria-hidden="true">✓</span></div><strong class="stat-value">22</strong><p><span class="trend-up">↑ 3 projects</span> <span>vs. last month</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>New clients</span><span class="stat-icon stat-icon--red" aria-hidden="true">♙</span></div><strong class="stat-value">12</strong><p><span class="trend-up">↑ 2 clients</span> <span>vs. last month</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Avg. completion</span><span class="stat-icon stat-icon--orange" aria-hidden="true">◷</span></div><strong class="stat-value">72%</strong><p><span class="stat-neutral">Across active projects</span></p></article>
+        </section>
+        <div class="dashboard-columns">
+          <section class="panel">
+            <div class="panel-heading"><div><h2>Revenue overview</h2><p>Illustrative monthly revenue trend.</p></div><span class="period-label">Last 6 months</span></div>
+            <div class="report-chart" role="img" aria-label="Monthly revenue: June 28 thousand dollars, July 32 thousand, August 30 thousand, September 37 thousand, October 39 thousand, November 43 thousand">
+              <div class="chart-scale"><span>$50k</span><span>$35k</span><span>$20k</span><span>$0</span></div>
+              <div class="chart-bars">
+                <div class="chart-column"><span class="chart-bar" style="height:56%"></span><span>Jun</span></div>
+                <div class="chart-column"><span class="chart-bar" style="height:64%"></span><span>Jul</span></div>
+                <div class="chart-column"><span class="chart-bar" style="height:60%"></span><span>Aug</span></div>
+                <div class="chart-column"><span class="chart-bar" style="height:74%"></span><span>Sep</span></div>
+                <div class="chart-column"><span class="chart-bar" style="height:78%"></span><span>Oct</span></div>
+                <div class="chart-column"><span class="chart-bar chart-bar--current" style="height:86%"></span><span>Nov</span></div>
+              </div>
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panel-heading"><div><h2>Project status</h2><p>Portfolio breakdown.</p></div><span class="period-label">36 projects</span></div>
+            <div class="report-status-list">
+              <div class="report-status-row"><div><span>Completed</span><strong>22 <small>projects</small></strong></div><div class="report-track"><span class="report-track--complete" style="width:61%"></span></div></div>
+              <div class="report-status-row"><div><span>In progress</span><strong>10 <small>projects</small></strong></div><div class="report-track"><span class="report-track--progress" style="width:28%"></span></div></div>
+              <div class="report-status-row"><div><span>In review</span><strong>4 <small>projects</small></strong></div><div class="report-track"><span class="report-track--review" style="width:11%"></span></div></div>
+            </div>
+            <a class="report-link" href="admin-projects.html">View all projects <span aria-hidden="true">→</span></a>
+          </section>
+        </div>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Recent report activity</h2><p>Recent milestones across the workspace.</p></div></div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Milestone</th><th>Client</th><th>Project</th><th>Date</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><span class="table-primary">Cloud migration completed</span></td><td>Fieldstone Co.</td><td>Cloud migration</td><td>Nov 07, 2026</td><td><span class="status-pill status-pill--complete">Complete</span></td></tr>
+                <tr><td><span class="table-primary">Design review requested</span></td><td>Meridian Group</td><td>Analytics platform</td><td>Nov 09, 2026</td><td><span class="status-pill status-pill--review">In review</span></td></tr>
+                <tr><td><span class="table-primary">Homepage approved</span></td><td>Northstar Labs</td><td>Website redesign</td><td>Nov 10, 2026</td><td><span class="status-pill status-pill--progress">On track</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="dashboard-footer"><span>© 2026 Stackly. All rights reserved.</span><span>Admin workspace <i aria-hidden="true">·</i> Preview data</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="sidebar-scrim" data-sidebar-scrim></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

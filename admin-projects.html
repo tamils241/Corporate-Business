@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Stackly | Admin Projects</title>
+  <meta name="description" content="Manage Stackly client projects and delivery status.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="dashboard-skip" href="#mainContent">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Admin navigation">
+      <a class="dashboard-brand" href="index.html" aria-label="Stackly home"><img src="images/logo/logo.webp" alt="Stackly"><span>Workspace</span></a>
+      <div class="sidebar-label">ADMIN MENU</div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="admin-dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a class="sidebar-link is-active" href="admin-projects.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▦</span>Projects</a>
+        <a class="sidebar-link" href="admin-clients.html"><span class="nav-icon" aria-hidden="true">♙</span>Clients</a>
+        <a class="sidebar-link" href="admin-reports.html"><span class="nav-icon" aria-hidden="true">▥</span>Reports</a>
+        <a class="sidebar-link" href="admin-settings.html"><span class="nav-icon" aria-hidden="true">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>Our team is here to help you.</p><a href="contact.html">Contact support <span aria-hidden="true">→</span></a></div>
+        <a class="sidebar-link sign-out-link" href="login.html"><span class="nav-icon" aria-hidden="true">↪</span>Sign out</a>
+      </div>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="sidebar-toggle" type="button" aria-label="Open navigation menu" aria-controls="dashboardSidebar" aria-expanded="false" data-sidebar-toggle><span></span><span></span><span></span></button>
+        <div class="topbar-context"><span class="topbar-eyebrow">Workspace</span><strong>Projects</strong></div>
+        <div class="topbar-actions"><a class="topbar-home" href="index.html">View website <span aria-hidden="true">↗</span></a><div class="user-chip"><span class="user-avatar user-avatar--admin" aria-hidden="true">AD</span><span class="user-chip-copy"><strong>Administrator</strong><small>Admin account</small></span></div></div>
+      </header>
+      <main class="dashboard-content" id="mainContent">
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Dashboard preview</strong> — project records shown here are sample data.</p></div>
+        <section class="page-heading" id="project-list">
+          <div><p class="page-kicker">DELIVERY WORKSPACE</p><h1>Projects</h1><p>Review project progress, ownership, and upcoming deadlines.</p></div>
+          <a class="button button--primary" href="#project-list"><span aria-hidden="true">＋</span> New project</a>
+        </section>
+        <section class="stats-grid" aria-label="Project statistics">
+          <article class="stat-card"><div class="stat-top"><span>All projects</span><span class="stat-icon stat-icon--blue" aria-hidden="true">▦</span></div><strong class="stat-value">36</strong><p><span class="stat-neutral">Across all clients</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>In progress</span><span class="stat-icon stat-icon--red" aria-hidden="true">◷</span></div><strong class="stat-value">10</strong><p><span class="stat-neutral">Currently underway</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Needs review</span><span class="stat-icon stat-icon--orange" aria-hidden="true">!</span></div><strong class="stat-value">4</strong><p><span class="stat-neutral">Awaiting a decision</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Completed</span><span class="stat-icon stat-icon--green" aria-hidden="true">✓</span></div><strong class="stat-value">22</strong><p><span class="trend-up">↑ 3 this month</span></p></article>
+        </section>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>All projects</h2><p>Current delivery status for every client.</p></div><span class="period-label">36 projects</span></div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Project</th><th>Client</th><th>Lead</th><th>Status</th><th>Due date</th></tr></thead>
+              <tbody>
+                <tr><td><span class="project-mark project-mark--purple">W</span><span class="table-primary">Website redesign</span></td><td>Northstar Labs</td><td>Alex Morgan</td><td><span class="status-pill status-pill--progress">In progress</span></td><td>Nov 24, 2026</td></tr>
+                <tr><td><span class="project-mark project-mark--blue">A</span><span class="table-primary">Analytics platform</span></td><td>Meridian Group</td><td>Riley Chen</td><td><span class="status-pill status-pill--review">In review</span></td><td>Nov 18, 2026</td></tr>
+                <tr><td><span class="project-mark project-mark--orange">M</span><span class="table-primary">Mobile application</span></td><td>Brightpath Health</td><td>Jordan Lee</td><td><span class="status-pill status-pill--progress">In progress</span></td><td>Dec 02, 2026</td></tr>
+                <tr><td><span class="project-mark project-mark--green">C</span><span class="table-primary">Cloud migration</span></td><td>Fieldstone Co.</td><td>Casey Taylor</td><td><span class="status-pill status-pill--complete">Completed</span></td><td>Nov 07, 2026</td></tr>
+                <tr><td><span class="project-mark project-mark--purple">D</span><span class="table-primary">Design system</span></td><td>Summit Works</td><td>Alex Morgan</td><td><span class="status-pill status-pill--review">In review</span></td><td>Dec 10, 2026</td></tr>
+                <tr><td><span class="project-mark project-mark--blue">P</span><span class="table-primary">Customer portal</span></td><td>Harbor Financial</td><td>Riley Chen</td><td><span class="status-pill status-pill--progress">In progress</span></td><td>Dec 18, 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="dashboard-footer"><span>© 2026 Stackly. All rights reserved.</span><span>Admin workspace <i aria-hidden="true">·</i> Preview data</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="sidebar-scrim" data-sidebar-scrim></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

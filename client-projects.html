@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Stackly | My Projects</title>
+  <meta name="description" content="Track progress across your Stackly projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="dashboard-skip" href="#mainContent">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Client navigation">
+      <a class="dashboard-brand" href="index.html" aria-label="Stackly home"><img src="images/logo/logo.webp" alt="Stackly"><span>Workspace</span></a>
+      <div class="sidebar-label">CLIENT MENU</div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="client-dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a class="sidebar-link is-active" href="client-projects.html" aria-current="page"><span class="nav-icon" aria-hidden="true">▦</span>My projects</a>
+        <a class="sidebar-link" href="client-updates.html"><span class="nav-icon" aria-hidden="true">◷</span>Updates</a>
+        <a class="sidebar-link" href="client-invoices.html"><span class="nav-icon" aria-hidden="true">$</span>Invoices</a>
+        <a class="sidebar-link" href="client-account.html"><span class="nav-icon" aria-hidden="true">⚙</span>Account</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>Talk to your Stackly team.</p><a href="contact.html">Contact support <span aria-hidden="true">→</span></a></div>
+        <a class="sidebar-link sign-out-link" href="login.html"><span class="nav-icon" aria-hidden="true">↪</span>Sign out</a>
+      </div>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="sidebar-toggle" type="button" aria-label="Open navigation menu" aria-controls="dashboardSidebar" aria-expanded="false" data-sidebar-toggle><span></span><span></span><span></span></button>
+        <div class="topbar-context"><span class="topbar-eyebrow">Workspace</span><strong>My projects</strong></div>
+        <div class="topbar-actions"><a class="topbar-home" href="index.html">View website <span aria-hidden="true">↗</span></a><div class="user-chip"><span class="user-avatar user-avatar--client" aria-hidden="true">JD</span><span class="user-chip-copy"><strong>Jordan Davis</strong><small>Client account</small></span></div></div>
+      </header>
+      <main class="dashboard-content" id="mainContent">
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Dashboard preview</strong> — these project details are sample data.</p></div>
+        <section class="page-heading"><div><p class="page-kicker">YOUR WORKSPACE</p><h1>My projects</h1><p>Keep up with progress, milestones, and delivery dates.</p></div><a class="button button--primary" href="contact.html"><span aria-hidden="true">＋</span> Discuss a project</a></section>
+        <section class="stats-grid" aria-label="Project overview">
+          <article class="stat-card"><div class="stat-top"><span>Active projects</span><span class="stat-icon stat-icon--blue" aria-hidden="true">▦</span></div><strong class="stat-value">3</strong><p><span class="stat-neutral">Across your workspace</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Tasks completed</span><span class="stat-icon stat-icon--green" aria-hidden="true">✓</span></div><strong class="stat-value">24</strong><p><span class="trend-up">↑ 6 this week</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Needs your review</span><span class="stat-icon stat-icon--orange" aria-hidden="true">◷</span></div><strong class="stat-value">2</strong><p><span class="stat-neutral">Waiting for your input</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Next milestone</span><span class="stat-icon stat-icon--red" aria-hidden="true">↗</span></div><strong class="stat-value">Nov 18</strong><p><span class="stat-neutral">Analytics platform review</span></p></article>
+        </section>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>All projects</h2><p>Progress and upcoming milestones for your work.</p></div><span class="period-label">3 active</span></div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Project</th><th>Team</th><th>Progress</th><th>Status</th><th>Due date</th></tr></thead>
+              <tbody>
+                <tr><td><span class="project-mark project-mark--purple">W</span><span class="table-primary">Website redesign</span></td><td>Product team</td><td><div class="table-progress"><span><i style="width:68%"></i></span><small>68%</small></div></td><td><span class="status-pill status-pill--progress">In progress</span></td><td>Nov 24, 2026</td></tr>
+                <tr><td><span class="project-mark project-mark--blue">A</span><span class="table-primary">Analytics platform</span></td><td>Engineering</td><td><div class="table-progress"><span><i style="width:42%"></i></span><small>42%</small></div></td><td><span class="status-pill status-pill--progress">In progress</span></td><td>Dec 12, 2026</td></tr>
+                <tr><td><span class="project-mark project-mark--orange">M</span><span class="table-primary">Mobile application</span></td><td>Design team</td><td><div class="table-progress"><span><i style="width:86%"></i></span><small>86%</small></div></td><td><span class="status-pill status-pill--review">In review</span></td><td>Nov 20, 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <div class="dashboard-columns dashboard-columns--bottom">
+          <section class="panel"><div class="panel-heading"><div><h2>Upcoming milestones</h2><p>Next steps from your project teams.</p></div></div>
+            <ul class="activity-list">
+              <li><span class="activity-dot activity-dot--orange"></span><span><strong>Analytics platform design review</strong><small>Nov 18 · Analytics platform</small></span></li>
+              <li><span class="activity-dot activity-dot--blue"></span><span><strong>Mobile app prototype approval</strong><small>Nov 20 · Mobile application</small></span></li>
+              <li><span class="activity-dot activity-dot--red"></span><span><strong>Website launch readiness</strong><small>Nov 24 · Website redesign</small></span></li>
+            </ul>
+          </section>
+          <section class="panel"><div class="panel-heading"><div><h2>Need an update?</h2><p>Your project team is ready to help.</p></div></div><p class="account-note">Reach out to your client success manager for questions about scope, progress, or upcoming milestones.</p><a class="report-link" href="contact.html">Contact your team <span aria-hidden="true">→</span></a></section>
+        </div>
+        <footer class="dashboard-footer"><span>© 2026 Stackly. All rights reserved.</span><span>Client workspace <i aria-hidden="true">·</i> Preview data</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="sidebar-scrim" data-sidebar-scrim></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Stackly | Admin Settings</title>
+  <meta name="description" content="Review Stackly workspace and administrator settings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="dashboard-skip" href="#mainContent">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Admin navigation">
+      <a class="dashboard-brand" href="index.html" aria-label="Stackly home"><img src="images/logo/logo.webp" alt="Stackly"><span>Workspace</span></a>
+      <div class="sidebar-label">ADMIN MENU</div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="admin-dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a class="sidebar-link" href="admin-projects.html"><span class="nav-icon" aria-hidden="true">▦</span>Projects</a>
+        <a class="sidebar-link" href="admin-clients.html"><span class="nav-icon" aria-hidden="true">♙</span>Clients</a>
+        <a class="sidebar-link" href="admin-reports.html"><span class="nav-icon" aria-hidden="true">▥</span>Reports</a>
+        <a class="sidebar-link is-active" href="admin-settings.html" aria-current="page"><span class="nav-icon" aria-hidden="true">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>Our team is here to help you.</p><a href="contact.html">Contact support <span aria-hidden="true">→</span></a></div>
+        <a class="sidebar-link sign-out-link" href="login.html"><span class="nav-icon" aria-hidden="true">↪</span>Sign out</a>
+      </div>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="sidebar-toggle" type="button" aria-label="Open navigation menu" aria-controls="dashboardSidebar" aria-expanded="false" data-sidebar-toggle><span></span><span></span><span></span></button>
+        <div class="topbar-context"><span class="topbar-eyebrow">Workspace</span><strong>Settings</strong></div>
+        <div class="topbar-actions"><a class="topbar-home" href="index.html">View website <span aria-hidden="true">↗</span></a><div class="user-chip"><span class="user-avatar user-avatar--admin" aria-hidden="true">AD</span><span class="user-chip-copy"><strong>Administrator</strong><small>Admin account</small></span></div></div>
+      </header>
+      <main class="dashboard-content" id="mainContent">
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Settings preview</strong> — settings are display-only until a workspace service is connected.</p></div>
+        <section class="page-heading">
+          <div><p class="page-kicker">WORKSPACE PREFERENCES</p><h1>Settings</h1><p>Review workspace details, notifications, and account preferences.</p></div>
+        </section>
+        <div class="settings-layout">
+          <nav class="settings-nav" aria-label="Settings sections">
+            <a class="settings-nav-link is-active" href="#workspace-settings" aria-current="location"><span aria-hidden="true">▦</span>Workspace</a>
+            <a class="settings-nav-link" href="#profile-settings"><span aria-hidden="true">♙</span>Admin profile</a>
+            <a class="settings-nav-link" href="#notification-settings"><span aria-hidden="true">◉</span>Notifications</a>
+            <a class="settings-nav-link" href="#security-settings"><span aria-hidden="true">◇</span>Security</a>
+          </nav>
+          <div class="settings-panels">
+            <section class="panel settings-panel" id="workspace-settings">
+              <div class="panel-heading"><div><h2>Workspace details</h2><p>Basic information for your Stackly workspace.</p></div></div>
+              <div class="settings-grid">
+                <div class="settings-field"><span>Workspace name</span><strong>Stackly Workspace</strong></div>
+                <div class="settings-field"><span>Contact email</span><strong>hello@stackly.example</strong></div>
+                <div class="settings-field"><span>Time zone</span><strong>Asia/Kolkata (UTC+05:30)</strong></div>
+                <div class="settings-field"><span>Default language</span><strong>English</strong></div>
+              </div>
+              <p class="settings-footnote">Workspace changes will be available when account settings are connected.</p>
+            </section>
+            <section class="panel settings-panel" id="profile-settings">
+              <div class="panel-heading"><div><h2>Admin profile</h2><p>Administrator account currently signed in.</p></div></div>
+              <div class="settings-profile"><span class="user-avatar user-avatar--admin">AD</span><div class="list-copy"><strong>Administrator</strong><small>Admin account · Full workspace access</small></div></div>
+              <div class="settings-grid">
+                <div class="settings-field"><span>Role</span><strong>Administrator</strong></div>
+                <div class="settings-field"><span>Account status</span><strong><span class="status-pill status-pill--complete">Active</span></strong></div>
+              </div>
+            </section>
+            <section class="panel settings-panel" id="notification-settings">
+              <div class="panel-heading"><div><h2>Notifications</h2><p>Notification preferences overview.</p></div></div>
+              <ul class="settings-options">
+                <li><span><strong>Project updates</strong><small>Milestones, reviews, and delivery changes.</small></span><span class="settings-state">Enabled</span></li>
+                <li><span><strong>New client inquiries</strong><small>Messages and new account requests.</small></span><span class="settings-state">Enabled</span></li>
+                <li><span><strong>Weekly workspace summary</strong><small>A recap of workspace activity.</small></span><span class="settings-state settings-state--off">Disabled</span></li>
+              </ul>
+            </section>
+            <section class="panel settings-panel" id="security-settings">
+              <div class="panel-heading"><div><h2>Security</h2><p>Account security status.</p></div></div>
+              <div class="security-summary"><span class="stat-icon stat-icon--green" aria-hidden="true">✓</span><span><strong>Security settings unavailable</strong><small>Authentication and access control need a connected backend.</small></span></div>
+              <a class="report-link" href="contact.html">Contact support <span aria-hidden="true">→</span></a>
+            </section>
+          </div>
+        </div>
+        <footer class="dashboard-footer"><span>© 2026 Stackly. All rights reserved.</span><span>Admin workspace <i aria-hidden="true">·</i> Preview settings</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="sidebar-scrim" data-sidebar-scrim></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

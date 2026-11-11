@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Stackly | Invoices</title>
+  <meta name="description" content="Review your Stackly invoices and billing overview.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="dashboard-skip" href="#mainContent">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Client navigation">
+      <a class="dashboard-brand" href="index.html" aria-label="Stackly home"><img src="images/logo/logo.webp" alt="Stackly"><span>Workspace</span></a>
+      <div class="sidebar-label">CLIENT MENU</div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="client-dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a class="sidebar-link" href="client-projects.html"><span class="nav-icon" aria-hidden="true">▦</span>My projects</a>
+        <a class="sidebar-link" href="client-updates.html"><span class="nav-icon" aria-hidden="true">◷</span>Updates</a>
+        <a class="sidebar-link is-active" href="client-invoices.html" aria-current="page"><span class="nav-icon" aria-hidden="true">$</span>Invoices</a>
+        <a class="sidebar-link" href="client-account.html"><span class="nav-icon" aria-hidden="true">⚙</span>Account</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="sidebar-help"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>Talk to your Stackly team.</p><a href="contact.html">Contact support <span aria-hidden="true">→</span></a></div><a class="sidebar-link sign-out-link" href="login.html"><span class="nav-icon" aria-hidden="true">↪</span>Sign out</a></div>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="sidebar-toggle" type="button" aria-label="Open navigation menu" aria-controls="dashboardSidebar" aria-expanded="false" data-sidebar-toggle><span></span><span></span><span></span></button>
+        <div class="topbar-context"><span class="topbar-eyebrow">Workspace</span><strong>Invoices</strong></div>
+        <div class="topbar-actions"><a class="topbar-home" href="index.html">View website <span aria-hidden="true">↗</span></a><div class="user-chip"><span class="user-avatar user-avatar--client" aria-hidden="true">JD</span><span class="user-chip-copy"><strong>Jordan Davis</strong><small>Client account</small></span></div></div>
+      </header>
+      <main class="dashboard-content" id="mainContent">
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Billing preview</strong> — invoices and balances shown here are sample data. Payments are not enabled.</p></div>
+        <section class="page-heading"><div><p class="page-kicker">BILLING WORKSPACE</p><h1>Invoices</h1><p>Review invoice status and your recent billing history.</p></div><a class="button button--primary" href="contact.html"><span aria-hidden="true">?</span> Billing support</a></section>
+        <section class="stats-grid" aria-label="Billing overview">
+          <article class="stat-card"><div class="stat-top"><span>Outstanding balance</span><span class="stat-icon stat-icon--orange" aria-hidden="true">$</span></div><strong class="stat-value">$2,400</strong><p><span class="stat-neutral">1 invoice due</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Next due date</span><span class="stat-icon stat-icon--red" aria-hidden="true">◷</span></div><strong class="stat-value">Nov 20</strong><p><span class="stat-neutral">INV-2026-1048</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Paid this year</span><span class="stat-icon stat-icon--green" aria-hidden="true">✓</span></div><strong class="stat-value">$18,600</strong><p><span class="stat-neutral">Across 8 invoices</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Billing contact</span><span class="stat-icon stat-icon--blue" aria-hidden="true">✉</span></div><strong class="stat-value invoice-contact-value">Jordan Davis</strong><p><span class="stat-neutral">jordan@example.com</span></p></article>
+        </section>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Invoice history</h2><p>Recent billing activity for your account.</p></div><span class="period-label">2026</span></div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Invoice</th><th>Project</th><th>Issue date</th><th>Due date</th><th>Amount</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><span class="table-primary">INV-2026-1048</span></td><td>Website redesign</td><td>Nov 01, 2026</td><td>Nov 20, 2026</td><td>$2,400</td><td><span class="status-pill status-pill--review">Due soon</span></td></tr>
+                <tr><td><span class="table-primary">INV-2026-0982</span></td><td>Analytics platform</td><td>Oct 01, 2026</td><td>Oct 20, 2026</td><td>$1,800</td><td><span class="status-pill status-pill--complete">Paid</span></td></tr>
+                <tr><td><span class="table-primary">INV-2026-0911</span></td><td>Website redesign</td><td>Sep 01, 2026</td><td>Sep 20, 2026</td><td>$2,400</td><td><span class="status-pill status-pill--complete">Paid</span></td></tr>
+                <tr><td><span class="table-primary">INV-2026-0845</span></td><td>Mobile application</td><td>Aug 01, 2026</td><td>Aug 20, 2026</td><td>$1,600</td><td><span class="status-pill status-pill--complete">Paid</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <div class="dashboard-columns dashboard-columns--bottom">
+          <section class="panel"><div class="panel-heading"><div><h2>Billing information</h2><p>Account billing contact.</p></div></div><div class="settings-grid"><div class="settings-field"><span>Contact name</span><strong>Jordan Davis</strong></div><div class="settings-field"><span>Email</span><strong>jordan@example.com</strong></div><div class="settings-field"><span>Billing cycle</span><strong>Monthly</strong></div><div class="settings-field"><span>Payment method</span><strong>Contact support to arrange</strong></div></div></section>
+          <section class="panel"><div class="panel-heading"><div><h2>Questions about billing?</h2><p>We can help clarify an invoice.</p></div></div><p class="account-note">Contact your Stackly team for a copy of an invoice, billing updates, or questions about a charge.</p><a class="report-link" href="contact.html">Get billing support <span aria-hidden="true">→</span></a></section>
+        </div>
+        <footer class="dashboard-footer"><span>© 2026 Stackly. All rights reserved.</span><span>Client workspace <i aria-hidden="true">·</i> Preview data</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="sidebar-scrim" data-sidebar-scrim></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

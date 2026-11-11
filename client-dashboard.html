@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Stackly | Client Dashboard</title>
+  <meta name="description" content="View your Stackly projects, updates and invoices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="dashboard-skip" href="#mainContent">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Client navigation">
+      <a class="dashboard-brand" href="index.html" aria-label="Stackly home">
+        <img src="images/logo/logo.webp" alt="Stackly">
+        <span>Workspace</span>
+      </a>
+      <div class="sidebar-label">CLIENT MENU</div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link is-active" href="client-dashboard.html" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a class="sidebar-link" href="client-projects.html"><span class="nav-icon" aria-hidden="true">▦</span>My projects</a>
+        <a class="sidebar-link" href="client-updates.html"><span class="nav-icon" aria-hidden="true">◷</span>Updates</a>
+        <a class="sidebar-link" href="client-invoices.html"><span class="nav-icon" aria-hidden="true">$</span>Invoices</a>
+        <a class="sidebar-link" href="client-account.html"><span class="nav-icon" aria-hidden="true">⚙</span>Account</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <strong>Need a hand?</strong>
+          <p>Talk to your Stackly team.</p>
+          <a href="contact.html">Contact support <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="sidebar-link sign-out-link" href="login.html"><span class="nav-icon" aria-hidden="true">↪</span>Sign out</a>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="sidebar-toggle" type="button" aria-label="Open navigation menu" aria-controls="dashboardSidebar" aria-expanded="false" data-sidebar-toggle>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="topbar-context"><span class="topbar-eyebrow">Workspace</span><strong>Client dashboard</strong></div>
+        <div class="topbar-actions">
+          <a class="topbar-home" href="index.html">View website <span aria-hidden="true">↗</span></a>
+          <div class="user-chip">
+            <span class="user-avatar user-avatar--client" aria-hidden="true">JD</span>
+            <span class="user-chip-copy"><strong>Jordan Davis</strong><small>Client account</small></span>
+          </div>
+        </div>
+      </header>
+
+      <main class="dashboard-content" id="mainContent">
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Dashboard preview</strong> — these sample details are static until connected to your account.</p></div>
+        <section class="page-heading" id="overview">
+          <div><p class="page-kicker">TUESDAY, 10 NOVEMBER 2026</p><h1>Welcome back, Jordan <span aria-hidden="true">✦</span></h1><p>Here’s an update on your projects and account.</p></div>
+          <a class="button button--primary" href="contact.html"><span aria-hidden="true">＋</span> Contact your team</a>
+        </section>
+
+        <section class="client-highlight" aria-label="Featured project">
+          <div class="highlight-copy"><span class="highlight-label"><i></i> FEATURED PROJECT</span><h2>Website redesign</h2><p>Your new digital experience is taking shape. Here’s the latest progress from the team.</p><a href="#myProjects">View project details <span aria-hidden="true">→</span></a></div>
+          <div class="highlight-progress"><div class="highlight-progress-top"><span>Overall progress</span><strong>68%</strong></div><div class="progress-track progress-track--light" role="img" aria-label="Website redesign progress: 68 percent complete"><span style="width:68%"></span></div><div class="highlight-foot"><span>Started Oct 12, 2026</span><span>Due Nov 24, 2026</span></div></div>
+          <div class="highlight-decoration" aria-hidden="true"><span></span><span></span><span></span></div>
+        </section>
+
+        <section class="stats-grid stats-grid--client" aria-label="Account overview">
+          <article class="stat-card"><div class="stat-top"><span>Active projects</span><span class="stat-icon stat-icon--blue" aria-hidden="true">▦</span></div><strong class="stat-value">3</strong><p><span class="stat-neutral">Across your workspace</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Tasks completed</span><span class="stat-icon stat-icon--green" aria-hidden="true">✓</span></div><strong class="stat-value">24</strong><p><span class="trend-up">↑ 6 this week</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Pending approvals</span><span class="stat-icon stat-icon--orange" aria-hidden="true">◷</span></div><strong class="stat-value">2</strong><p><span class="stat-neutral">Waiting for your review</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Open invoices</span><span class="stat-icon stat-icon--red" aria-hidden="true">$</span></div><strong class="stat-value">1</strong><p><span class="stat-neutral">Next due Nov 20, 2026</span></p></article>
+        </section>
+
+        <div class="dashboard-columns">
+          <section class="panel panel--wide" id="myProjects">
+            <div class="panel-heading"><div><h2>My projects</h2><p>Track progress across your work.</p></div><a class="text-link" href="#overview">View all <span aria-hidden="true">→</span></a></div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead><tr><th>Project</th><th>Team</th><th>Progress</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="project-mark project-mark--purple">W</span><span class="table-primary">Website redesign</span></td><td>Product team</td><td><div class="table-progress"><span><i style="width:68%"></i></span><small>68%</small></div></td><td><span class="status-pill status-pill--progress">In progress</span></td></tr>
+                  <tr><td><span class="project-mark project-mark--blue">A</span><span class="table-primary">Analytics platform</span></td><td>Engineering</td><td><div class="table-progress"><span><i style="width:42%"></i></span><small>42%</small></div></td><td><span class="status-pill status-pill--progress">In progress</span></td></tr>
+                  <tr><td><span class="project-mark project-mark--orange">M</span><span class="table-primary">Mobile application</span></td><td>Design team</td><td><div class="table-progress"><span><i style="width:86%"></i></span><small>86%</small></div></td><td><span class="status-pill status-pill--review">In review</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="panel" id="updates">
+            <div class="panel-heading"><div><h2>Latest updates</h2><p>News from your project team.</p></div><span class="new-indicator">2 new</span></div>
+            <ul class="activity-list">
+              <li><span class="activity-dot activity-dot--blue"></span><span><strong>Homepage designs are ready</strong><small>Website redesign · 35 minutes ago</small></span></li>
+              <li><span class="activity-dot activity-dot--red"></span><span><strong>Review requested: brand direction</strong><small>Website redesign · 3 hours ago</small></span></li>
+              <li><span class="activity-dot activity-dot--green"></span><span><strong>API integration completed</strong><small>Analytics platform · Yesterday</small></span></li>
+            </ul>
+            <a class="report-link" href="contact.html">Message your team <span aria-hidden="true">→</span></a>
+          </section>
+        </div>
+
+        <div class="dashboard-columns dashboard-columns--bottom">
+          <section class="panel" id="invoices">
+            <div class="panel-heading"><div><h2>Recent invoices</h2><p>Your latest billing activity.</p></div><a class="text-link" href="#account">Billing details <span aria-hidden="true">→</span></a></div>
+            <div class="invoice-row"><span class="invoice-icon" aria-hidden="true">▤</span><span class="list-copy"><strong>INV-2026-1048</strong><small>Website redesign · Nov 01, 2026</small></span><span class="invoice-amount">$2,400</span><span class="status-pill status-pill--review">Due Nov 20</span></div>
+            <div class="invoice-row"><span class="invoice-icon" aria-hidden="true">▤</span><span class="list-copy"><strong>INV-2026-0982</strong><small>Analytics platform · Oct 01, 2026</small></span><span class="invoice-amount">$1,800</span><span class="status-pill status-pill--complete">Paid</span></div>
+          </section>
+          <section class="panel account-panel" id="account">
+            <div class="panel-heading"><div><h2>Your account</h2><p>Account representative</p></div></div>
+            <div class="account-person"><span class="user-avatar user-avatar--rep">SM</span><span class="list-copy"><strong>Sam Morgan</strong><small>Client success manager</small></span></div>
+            <p class="account-note">Questions about your projects? Sam is here to help.</p>
+            <a class="report-link" href="contact.html">Get in touch <span aria-hidden="true">→</span></a>
+          </section>
+        </div>
+        <footer class="dashboard-footer"><span>© 2026 Stackly. All rights reserved.</span><span>Client workspace <i aria-hidden="true">·</i> Preview data</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="sidebar-scrim" data-sidebar-scrim></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

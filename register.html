@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly | Create an Account</title>
+<meta name="description" content="Create your Stackly account and join a growing community of innovators, creators and problem solvers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<main class="signup-layout">
+  <section class="visual-panel">
+    <div class="photo"></div><div class="visual-shade"></div>
+    <a class="auth-logo" href="index.html" aria-label="Stackly â€” home">
+      <img src="images/logo/logo.webp" alt="Stackly">
+    </a>
+    <div class="red-corner red-bottom"></div>
+    <div class="visual-copy">
+      <span class="eyebrow"></span>
+      <h1>Build Your Future<br>with Stackly</h1>
+      <p>Create your account and be part of a growing<br class="desktop-break"> community of innovators, creators and problem solvers.</p>
+      <div class="benefits">
+        <div class="benefit"><svg viewBox="0 0 32 32"><circle cx="11" cy="10" r="5"/><path d="M2 27v-2c0-4 4-7 9-7s9 3 9 7v2M22 6a5 5 0 0 1 0 9m2 4c4 0 6 3 6 6v2"/></svg><span>Collaborate<br>with teams</span></div>
+        <div class="benefit"><svg viewBox="0 0 32 32"><path d="m16 3 11 4v8c0 7-5 11-11 14C10 26 5 22 5 15V7l11-4Z"/><path d="m11 16 4 4 7-8"/></svg><span>Access<br>premium tools</span></div>
+        <div class="benefit"><svg viewBox="0 0 32 32"><path d="m4 25 8-8 5 4L28 8M20 8h8v8"/></svg><span>Grow<br>your career</span></div>
+      </div>
+    </div>
+    <div class="dot-pattern"></div>
+  </section>
+  <section class="form-panel">
+    <div class="form-wrap">
+      <header class="form-heading">
+        <h2>Create An Account</h2>
+        <p>Start your journey with Stackly in a few simple steps.</p>
+      </header>
+      <button class="google-button" type="button" data-message="registerMessage"><span class="google-g">G</span>Sign up with Google</button>
+      <div class="separator"><span></span><b>Or</b><span></span></div>
+      <form id="registerForm" novalidate>
+        <label class="input-wrap">
+          <span class="sr-only">Account role</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></svg>
+          <select id="registerRole" name="role" aria-describedby="registerMessage" required>
+            <option value="client" selected>Client</option>
+            <option value="admin">Admin</option>
+          </select>
+        </label>
+        <label class="input-wrap">
+          <span class="sr-only">Full name</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2"/></svg>
+          <input id="registerName" type="text" placeholder="Type your name" autocomplete="name" aria-describedby="registerMessage" required>
+        </label>
+        <label class="input-wrap">
+          <span class="sr-only">Email address</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          <input id="registerEmail" type="email" placeholder="Enter your Email" autocomplete="email" aria-describedby="registerMessage" required>
+        </label>
+        <label class="input-wrap">
+          <span class="sr-only">Password (minimum 8 characters)</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2"/></svg>
+          <input id="registerPassword" type="password" placeholder="Password (min. 8 characters)" autocomplete="new-password" minlength="8" aria-describedby="registerMessage" required>
+          <button class="toggle-password" type="button" data-target="registerPassword" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        </label>
+        <label class="input-wrap">
+          <span class="sr-only">Confirm password</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2"/></svg>
+          <input id="registerConfirm" type="password" placeholder="Confirm password" autocomplete="new-password" aria-describedby="registerMessage" required>
+          <button class="toggle-password" type="button" data-target="registerConfirm" aria-label="Show password confirmation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        </label>
+        <p class="form-message" id="registerMessage" role="status" aria-live="polite"></p>
+        <label class="terms"><input id="registerTerms" type="checkbox"><span>I agree with Terms and Privacy</span></label>
+        <button class="submit-button" type="submit">Create account</button>
+      </form>
+      <p class="account-prompt">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+  </section>
+</main>
+<script src="js/script.js"></script>
+</body></html>
+
+
+

@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About â€” Stackly | PankajUX India</title>
+  <meta name="description" content="Stackly is the product engineering studio of PankajUX India â€” a deliberately small, senior team of designers, engineers and strategists building dependable digital products since 2012.">
+  <meta name="theme-color" content="#071625">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='10' fill='%23ed1f37'/%3E%3Cpath d='M11 12.5h14M11 18h9M11 23.5h14' stroke='white' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(function () {
+      if (!document.documentElement.dataset.homeReady) {
+        document.documentElement.classList.remove('js');
+      }
+    }, 2500);
+  </script>
+</head>
+<body class="home page">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Stackly â€” home">
+        <img class="logo__image" src="images/logo/logo.webp" alt="Stackly">
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="is-active">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header__login" href="login.html">Login</a>
+        <a class="btn btn--red btn--sm header__signup" href="register.html">Sign Up</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+          <span class="menu-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <nav aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Page hero -->
+    <section class="page-hero page-hero--about" id="top">
+      <video class="page-hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+        <source src="./videos/hero.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="page-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span>About</span>
+          </nav>
+          <p class="eyebrow eyebrow--light">About Stackly</p>
+          <h1>A senior studio built for <em>long-term outcomes.</em></h1>
+          <p class="page-hero__lead">We're a deliberately small team of designers, engineers and strategists who care about the details â€” and stay accountable to the result.</p>
+          <div class="page-hero__actions">
+            <a class="btn btn--red" href="contact.html">Work with us <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost" href="index.html#work">See our work</a>
+          </div>
+          <div class="page-hero__meta">
+            <div><strong>Since 2012</strong><span>Building in India</span></div>
+            <div><strong>14+</strong><span>Years of craft</span></div>
+            <div><strong>50+</strong><span>Senior specialists</span></div>
+            <div><strong>96%</strong><span>Client retention</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story / Who We Are -->
+    <section class="section about-story">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow reveal">Who we are</p>
+          <h2 class="section-title reveal">
+            Digital Solutions for a Smarter
+            <span>Tomorrow</span>
+          </h2>
+          <p class="intro-lead reveal">
+            STACKLY is a modern IT solutions company focused on creating
+            innovative, scalable and user-friendly digital experiences.
+            We help startups, small and medium businesses and enterprises
+            turn their ideas into powerful digital products.
+          </p>
+          <p class="reveal">
+            With a team of skilled developers, designers and strategists,
+            we deliver end-to-end solutions — from concept to deployment —
+            that drive real business growth.
+          </p>
+          <a href="#contact" class="btn btn--red reveal">
+            Get Started <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="intro-media reveal">
+          <img src="images/about-team.webp" alt="STACKLY team collaborating in a modern office" loading="lazy" width="1400" height="933">
+          <div class="intro-media__badge">
+            <span class="story-play" aria-hidden="true">▶</span>
+            <span class="story-content">
+              <strong>Our Story</strong>
+              <span>Watch how STACKLY started and what drives us</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Impact / Stats -->
+    <section class="stat-band about-impact" aria-label="Stackly Our Impact">
+      <div class="container">
+        <div class="impact-grid">
+          <div class="impact-content">
+            <p class="impact-eyebrow">Our Impact</p>
+            <h2 class="impact-title">
+              Numbers That Tell
+              <span>Our Story</span>
+            </h2>
+            <p class="impact-description">
+              Our growth is driven by the trust of our clients,
+              our team's hard work and the impact we create
+              through technology.
+            </p>
+            <a href="index.html#work" class="impact-btn">
+              View Our Projects <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="impact-stats">
+            <div class="impact-stat">
+              <div class="impact-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div>
+              <div class="impact-stat-content">
+                <strong>500+</strong>
+                <span>Happy Clients</span>
+                <p>We've helped businesses across the globe.</p>
+              </div>
+            </div>
+
+            <div class="impact-stat">
+              <div class="impact-icon"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
+              <div class="impact-stat-content">
+                <strong>200+</strong>
+                <span>Successful Projects</span>
+                <p>From startups to enterprises, we build it all.</p>
+              </div>
+            </div>
+
+            <div class="impact-stat">
+              <div class="impact-icon"><i class="fa-regular fa-star" aria-hidden="true"></i></div>
+              <div class="impact-stat-content">
+                <strong>5+</strong>
+                <span>Years of Experience</span>
+                <p>Delivering quality and innovation since day one.</p>
+              </div>
+            </div>
+
+            <div class="impact-stat">
+              <div class="impact-icon"><i class="fa-regular fa-face-smile" aria-hidden="true"></i></div>
+              <div class="impact-stat-content">
+                <strong>99%</strong>
+                <span>Client Satisfaction</span>
+                <p>Our success is measured by your success.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="section values-section">
+      <div class="container values-layout">
+        <div class="values-intro">
+          <p class="eyebrow reveal">Our Values</p>
+          <h2 class="section-title reveal">
+            What Drives <span>Us</span>
+          </h2>
+          <p class="values-description reveal">
+            At STACKLY, our values guide everything we do —
+            from how we work with clients to how we build
+            our products and our team.
+          </p>
+          <a href="services.html" class="values-btn reveal">
+            Our Services <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i></div>
+            <h3>Innovation</h3>
+            <p>We embrace new ideas and modern technologies to create better solutions.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+            <h3>Collaboration</h3>
+            <p>We believe in the power of teamwork and open communication.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+            <h3>Integrity</h3>
+            <p>We do what's right, with honesty and transparency.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+            <h3>Customer Focus</h3>
+            <p>Your goals are our priority. We're with you at every step.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></div>
+            <h3>Continuous Growth</h3>
+            <p>We learn, adapt and evolve — always.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-regular fa-heart" aria-hidden="true"></i></div>
+            <h3>Passion</h3>
+            <p>We love what we do, and it shows in our work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="section team-section">
+      <div class="container team-layout">
+        <div class="team-intro">
+          <p class="eyebrow reveal">Our Team</p>
+          <h2 class="section-title reveal">
+            Meet the People
+            Behind <span>STACKLY</span>
+          </h2>
+          <p class="team-description reveal">
+            Our team is a blend of creative minds, technical experts
+            and problem solvers, working together to build
+            something extraordinary.
+          </p>
+          <a href="mailto:hello@stackly.in?subject=Careers%20at%20STACKLY" class="team-btn reveal">
+            Join Our Team <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card reveal">
+            <div class="team-image">
+              <img src="images/about-team.webp" alt="STACKLY team collaborating in their office" loading="lazy" width="1400" height="933">
+            </div>
+            <div class="team-info">
+              <h3>Naveen Kumar</h3>
+              <p>Founder &amp; CEO</p>
+              <div class="team-social">
+                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal">
+            <div class="team-image">
+              <img src="images/intro-team.webp" alt="STACKLY team members sharing ideas around a table" loading="lazy" width="1400" height="933">
+            </div>
+            <div class="team-info">
+              <h3>Priya Sharma</h3>
+              <p>Lead Designer</p>
+              <div class="team-social">
+                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal">
+            <div class="team-image">
+              <img src="images/team-hero.webp" alt="STACKLY colleagues collaborating on a project" loading="lazy" width="333" height="333">
+            </div>
+            <div class="team-info">
+              <h3>Rahul Verma</h3>
+              <p>Senior Developer</p>
+              <div class="team-social">
+                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card reveal">
+            <div class="team-image">
+              <img src="images/service-team.webp" alt="STACKLY team reviewing work together" loading="lazy" width="700" height="468">
+            </div>
+            <div class="team-info">
+              <h3>Anjali Mehta</h3>
+              <p>Marketing Lead</p>
+              <div class="team-social">
+                <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__inner">
+            <p class="eyebrow eyebrow--light">Let's get started</p>
+            <h2><span>Have a problem worth solving?</span> <em>Let's build it.</em></h2>
+            <p>Tell us where you're headed. We'll come back within one business day with a clear next step â€” no pitch deck required.</p>
+            <div class="cta__actions">
+              <a class="btn btn--red" href="contact.html">Start a conversation <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost" href="mailto:hello@stackly.in">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                hello@stackly.in
+              </a>
+            </div>
+            <p class="cta__note">Based in India Â· Working worldwide Â· Replies within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo logo--light" href="index.html" aria-label="Stackly â€” home">
+            <img class="logo__image" src="images/logo/logo.webp" alt="Stackly">
+          </a>
+          <p>The product engineering studio of PankajUX India. We design, build and scale digital products for ambitious teams.</p>
+          <div class="footer__socials">
+            <a href="404.html" aria-label="Stackly on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 22 10.7 22 14.1V21h-4v-6.1c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9V9Z"/></svg></a>
+            <a href="404.html" aria-label="Stackly on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1L4.7 21H1.5l7.5-8.6L1 3h6.6l4.5 5.6L17.5 3Zm-1.1 16h1.8L7.3 4.9H5.4L16.4 19Z"/></svg></a>
+            <a href="404.html" aria-label="Stackly on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" class="fill-dot"/></svg></a>
+            <a href="404.html" aria-label="Stackly on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.2H7.7V13h2.7v8h3.1Z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html#services">Our services</a></li>
+            <li><a href="index.html#work">Our work</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Product engineering</a></li>
+            <li><a href="services.html">UX/UI design</a></li>
+            <li><a href="services.html">Cloud &amp; DevOps</a></li>
+            <li><a href="services.html">Data &amp; AI</a></li>
+            <li><a href="services.html">Managed support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__news">
+          <h4>Insights, once a month.</h4>
+          <p>Practical notes on product, design and engineering. No noise.</p>
+          <form id="newsletterForm" novalidate>
+            <label class="sr-only" for="newsletterEmail">Work email</label>
+            <div class="newsletter__row">
+              <input id="newsletterEmail" name="email" type="email" placeholder="you@company.com" autocomplete="email" aria-describedby="newsletterMessage" required>
+              <button type="submit" aria-label="Subscribe to the newsletter"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+            <p class="newsletter__msg" id="newsletterMessage" role="status"></p>
+          </form>
+          <div class="footer__contact">
+            <a href="mailto:hello@stackly.in">hello@stackly.in</a>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+            <span>Pune Â· Bengaluru Â· Remote</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Â© <span id="year">2026</span> Stackly Â· PankajUX India. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="404.html">Privacy</a>
+          <a href="404.html">Terms</a>
+          <a href="404.html">Sitemap</a>
+        </div>
+        <p class="footer__made"><span aria-hidden="true"></span> Made with care in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" id="toTop" href="#top" aria-label="Back to top">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <script src="js/home.js" defer></script>
+  <script src="js/pages.js" defer></script>
+</body>
+</html>

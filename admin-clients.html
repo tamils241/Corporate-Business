@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Stackly | Admin Clients</title>
+  <meta name="description" content="Manage client accounts and relationships in Stackly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <a class="dashboard-skip" href="#mainContent">Skip to dashboard content</a>
+  <div class="dashboard-shell">
+    <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Admin navigation">
+      <a class="dashboard-brand" href="index.html" aria-label="Stackly home"><img src="images/logo/logo.webp" alt="Stackly"><span>Workspace</span></a>
+      <div class="sidebar-label">ADMIN MENU</div>
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="admin-dashboard.html"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+        <a class="sidebar-link" href="admin-projects.html"><span class="nav-icon" aria-hidden="true">▦</span>Projects</a>
+        <a class="sidebar-link is-active" href="admin-clients.html" aria-current="page"><span class="nav-icon" aria-hidden="true">♙</span>Clients</a>
+        <a class="sidebar-link" href="admin-reports.html"><span class="nav-icon" aria-hidden="true">▥</span>Reports</a>
+        <a class="sidebar-link" href="admin-settings.html"><span class="nav-icon" aria-hidden="true">⚙</span>Settings</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-icon" aria-hidden="true">?</span><strong>Need a hand?</strong><p>Our team is here to help you.</p><a href="contact.html">Contact support <span aria-hidden="true">→</span></a></div>
+        <a class="sidebar-link sign-out-link" href="login.html"><span class="nav-icon" aria-hidden="true">↪</span>Sign out</a>
+      </div>
+    </aside>
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="sidebar-toggle" type="button" aria-label="Open navigation menu" aria-controls="dashboardSidebar" aria-expanded="false" data-sidebar-toggle><span></span><span></span><span></span></button>
+        <div class="topbar-context"><span class="topbar-eyebrow">Workspace</span><strong>Clients</strong></div>
+        <div class="topbar-actions"><a class="topbar-home" href="index.html">View website <span aria-hidden="true">↗</span></a><div class="user-chip"><span class="user-avatar user-avatar--admin" aria-hidden="true">AD</span><span class="user-chip-copy"><strong>Administrator</strong><small>Admin account</small></span></div></div>
+      </header>
+      <main class="dashboard-content" id="mainContent">
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Dashboard preview</strong> — client details shown here are sample data.</p></div>
+        <section class="page-heading" id="client-list">
+          <div><p class="page-kicker">RELATIONSHIP WORKSPACE</p><h1>Clients</h1><p>Review client accounts, active work, and relationship status.</p></div>
+          <a class="button button--primary" href="#client-list"><span aria-hidden="true">＋</span> Add client</a>
+        </section>
+        <section class="stats-grid" aria-label="Client statistics">
+          <article class="stat-card"><div class="stat-top"><span>Total clients</span><span class="stat-icon stat-icon--red" aria-hidden="true">♙</span></div><strong class="stat-value">248</strong><p><span class="trend-up">↑ 12 this month</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Active accounts</span><span class="stat-icon stat-icon--green" aria-hidden="true">✓</span></div><strong class="stat-value">196</strong><p><span class="stat-neutral">With ongoing engagement</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>New inquiries</span><span class="stat-icon stat-icon--orange" aria-hidden="true">✉</span></div><strong class="stat-value">18</strong><p><span class="stat-neutral">5 need attention</span></p></article>
+          <article class="stat-card"><div class="stat-top"><span>Enterprise</span><span class="stat-icon stat-icon--blue" aria-hidden="true">◇</span></div><strong class="stat-value">42</strong><p><span class="stat-neutral">Across all industries</span></p></article>
+        </section>
+        <section class="panel">
+          <div class="panel-heading"><div><h2>Client directory</h2><p>Recently active accounts and their current work.</p></div><span class="period-label">248 clients</span></div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Client</th><th>Contact</th><th>Projects</th><th>Account type</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td><span class="user-avatar user-avatar--rose">NS</span><span class="table-primary">Northstar Labs</span></td><td>hello@northstarlabs.example</td><td>3 active</td><td><span class="client-type">Enterprise</span></td><td><span class="status-pill status-pill--complete">Active</span></td></tr>
+                <tr><td><span class="user-avatar user-avatar--mint">MP</span><span class="table-primary">Meridian Group</span></td><td>team@meridiangroup.example</td><td>2 active</td><td><span class="client-type">Business</span></td><td><span class="status-pill status-pill--complete">Active</span></td></tr>
+                <tr><td><span class="user-avatar user-avatar--gold">BH</span><span class="table-primary">Brightpath Health</span></td><td>contact@brightpath.example</td><td>1 active</td><td><span class="client-type">Enterprise</span></td><td><span class="status-pill status-pill--review">Onboarding</span></td></tr>
+                <tr><td><span class="user-avatar user-avatar--client">FC</span><span class="table-primary">Fieldstone Co.</span></td><td>office@fieldstone.example</td><td>1 active</td><td><span class="client-type">Business</span></td><td><span class="status-pill status-pill--complete">Active</span></td></tr>
+                <tr><td><span class="user-avatar user-avatar--rep">SW</span><span class="table-primary">Summit Works</span></td><td>hi@summitworks.example</td><td>2 active</td><td><span class="client-type">Business</span></td><td><span class="status-pill status-pill--complete">Active</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <footer class="dashboard-footer"><span>© 2026 Stackly. All rights reserved.</span><span>Admin workspace <i aria-hidden="true">·</i> Preview data</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="sidebar-scrim" data-sidebar-scrim></div>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

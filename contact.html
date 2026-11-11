@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact â€” Stackly | PankajUX India</title>
+  <meta name="description" content="Tell Stackly about your product. Email hello@stackly.in, call +91 98765 43210, or send a project brief â€” we reply within one business day.">
+  <meta name="theme-color" content="#071625">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='10' fill='%23ed1f37'/%3E%3Cpath d='M11 12.5h14M11 18h9M11 23.5h14' stroke='white' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(function () {
+      if (!document.documentElement.dataset.homeReady) {
+        document.documentElement.classList.remove('js');
+      }
+    }, 2500);
+  </script>
+</head>
+<body class="home page">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Stackly â€” home">
+        <img class="logo__image" src="images/logo/logo.webp" alt="Stackly">
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="is-active">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header__login" href="login.html">Login</a>
+        <a class="btn btn--red btn--sm header__signup" href="register.html">Sign Up</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav">
+          <span class="menu-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <nav aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Page hero -->
+    <section class="page-hero page-hero--contact" id="top">
+      <video class="page-hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1">
+        <source src="./videos/hero.mp4" type="video/mp4">
+      </video>
+      <div class="container">
+        <div class="page-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <span>Contact</span>
+          </nav>
+          <p class="eyebrow eyebrow--light">Contact</p>
+          <h1>Tell us where you're <em>headed.</em></h1>
+          <p class="page-hero__lead">Share the problem, the timeline and what success looks like. We'll come back within one business day with a clear next step.</p>
+          <div class="page-hero__meta">
+            <div><strong>24h</strong><span>Reply time</span></div>
+            <div><strong>Monâ€“Fri</strong><span>9amâ€“7pm IST</span></div>
+            <div><strong>3</strong><span>Ways to reach us</span></div>
+            <div><strong>Global</strong><span>Remote friendly</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact form + details -->
+    <section class="section contact-section">
+      <div class="container contact-layout">
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <h2>Start a conversation.</h2>
+          <p>A few details help us route your note to the right person. No pitch deck required.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="contactName">Full name <span aria-hidden="true">*</span></label>
+              <input id="contactName" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="contactEmail">Work email <span aria-hidden="true">*</span></label>
+              <input id="contactEmail" name="email" type="email" placeholder="you@company.com" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="contactCompany">Company</label>
+              <input id="contactCompany" name="company" type="text" placeholder="Company name" autocomplete="organization">
+            </div>
+
+            <div class="field">
+              <label for="contactService">What do you need?</label>
+              <select id="contactService" name="service">
+                <option value="">Select a service</option>
+                <option>Product strategy &amp; discovery</option>
+                <option>UX/UI design</option>
+                <option>Web development</option>
+                <option>Mobile apps</option>
+                <option>Cloud &amp; DevOps</option>
+                <option>Data &amp; AI</option>
+                <option>Dedicated team</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label for="contactBudget">Budget range</label>
+              <select id="contactBudget" name="budget">
+                <option value="">Select a range</option>
+                <option>Under $10k</option>
+                <option>$10k â€“ $25k</option>
+                <option>$25k â€“ $50k</option>
+                <option>$50k â€“ $100k</option>
+                <option>$100k+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field field--full">
+              <label for="contactMessage">Project details <span aria-hidden="true">*</span></label>
+              <textarea id="contactMessage" name="message" placeholder="What are you building, and what's the biggest constraint?" required></textarea>
+            </div>
+          </div>
+
+          <p class="form-message" id="contactFormMessage" role="status" aria-live="polite"></p>
+          <button class="btn btn--red" type="submit">Send message <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="contact-form__note">By sending this form you agree to our privacy policy. We'll only use your details to reply to this enquiry.</p>
+        </form>
+
+        <aside class="contact-details reveal">
+          <p class="eyebrow">Talk to us</p>
+          <h2>Prefer a direct line?</h2>
+          <p>Email or call us directly â€” or use the form and we'll route your note to the right person.</p>
+
+          <div class="contact-card">
+            <span class="contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:hello@stackly.in">hello@stackly.in</a>
+              <span class="contact-card__small">Replies within one business day</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></svg></span>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+              <span class="contact-card__small">Monâ€“Fri, 9amâ€“7pm IST</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+            <div>
+              <h3>Studio</h3>
+              <p>Baner, Pune 411045<br>Maharashtra, India</p>
+              <span class="contact-card__small">Visits by appointment</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div>
+              <h3>Response promise</h3>
+              <p>Every enquiry gets a real reply from a senior team member â€” not an automated sequence.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Offices -->
+    <section class="section section--paper">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow reveal">Where we are</p>
+            <h2 class="section-title reveal">Close to our clients,<br>wherever they are.</h2>
+          </div>
+          <div class="section-head__aside reveal">
+            <p>Our home base is in India, but our teams work alongside clients across time zones every day.</p>
+          </div>
+        </header>
+
+        <div class="offices-grid">
+          <article class="office-card reveal">
+            <p class="office-card__city">Pune</p>
+            <span class="office-card__tag">Headquarters</span>
+            <p>Baner Road, Baner<br>Pune 411045, Maharashtra<br>India</p>
+            <a href="mailto:hello@stackly.in">hello@stackly.in</a>
+          </article>
+
+          <article class="office-card reveal" style="--delay:80ms">
+            <p class="office-card__city">Bengaluru</p>
+            <span class="office-card__tag">Design studio</span>
+            <p>Indiranagar, 100 Feet Road<br>Bengaluru 560038, Karnataka<br>India</p>
+            <a href="mailto:hello@stackly.in">hello@stackly.in</a>
+          </article>
+
+          <article class="office-card reveal" style="--delay:160ms">
+            <p class="office-card__city">Remote</p>
+            <span class="office-card__tag">Global delivery</span>
+            <p>Distributed teams across<br>India, Europe and North America<br>Working in your time zone</p>
+            <a href="contact.html">Start a conversation</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <div>
+            <p class="eyebrow reveal">Before you ask</p>
+            <h2 class="section-title reveal">A few quick answers.</h2>
+            <p class="section-sub reveal">Still curious? Send us a note â€” we're happy to talk through the details.</p>
+          </div>
+        </header>
+
+        <div class="faq-list reveal">
+          <details class="faq-item" open>
+            <summary>How quickly can you start?</summary>
+            <p>Most engagements begin within one to two weeks of a discovery call. For staff augmentation we can often place a senior developer sooner, depending on the stack and scope.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What does a typical project cost?</summary>
+            <p>It depends on scope, but most first releases land between $25k and $100k. After a short discovery conversation we'll give you a clear range and the assumptions behind it â€” no surprises later.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you work with existing teams?</summary>
+            <p>Yes. We regularly embed with in-house teams, follow your rituals and tools, and leave behind documentation and tests so your team can keep moving independently.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you take over a stalled project?</summary>
+            <p>Often, yes. We start with a short technical and product audit, then agree on the smallest path to a stable release before planning anything larger.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Where are you based?</summary>
+            <p>Our main studio is in Pune, with a design team in Bengaluru. We work remotely with clients worldwide and overlap with your working hours where it matters.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact-cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__inner">
+            <p class="eyebrow eyebrow--light">Not ready for a form?</p>
+            <h2><span>A quick conversation</span> <em>is enough to start.</em></h2>
+            <p>Send a two-line email with what you're building. We'll tell you honestly whether we're the right fit.</p>
+            <div class="cta__actions">
+              <a class="btn btn--red" href="mailto:hello@stackly.in">Email us directly <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn--ghost" href="tel:+919876543210">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></svg>
+                +91 98765 43210
+              </a>
+            </div>
+            <p class="cta__note">Based in India Â· Working worldwide Â· Replies within 24 hours</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="logo logo--light" href="index.html" aria-label="Stackly â€” home">
+            <img class="logo__image" src="images/logo/logo.webp" alt="Stackly">
+          </a>
+          <p>The product engineering studio of PankajUX India. We design, build and scale digital products for ambitious teams.</p>
+          <div class="footer__socials">
+            <a href="404.html" aria-label="Stackly on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 22 10.7 22 14.1V21h-4v-6.1c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9V9Z"/></svg></a>
+            <a href="404.html" aria-label="Stackly on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1L4.7 21H1.5l7.5-8.6L1 3h6.6l4.5 5.6L17.5 3Zm-1.1 16h1.8L7.3 4.9H5.4L16.4 19Z"/></svg></a>
+            <a href="404.html" aria-label="Stackly on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" class="fill-dot"/></svg></a>
+            <a href="404.html" aria-label="Stackly on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.2H7.7V13h2.7v8h3.1Z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html#services">Our services</a></li>
+            <li><a href="index.html#work">Our work</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Product engineering</a></li>
+            <li><a href="services.html">UX/UI design</a></li>
+            <li><a href="services.html">Cloud &amp; DevOps</a></li>
+            <li><a href="services.html">Data &amp; AI</a></li>
+            <li><a href="services.html">Managed support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__news">
+          <h4>Insights, once a month.</h4>
+          <p>Practical notes on product, design and engineering. No noise.</p>
+          <form id="newsletterForm" novalidate>
+            <label class="sr-only" for="newsletterEmail">Work email</label>
+            <div class="newsletter__row">
+              <input id="newsletterEmail" name="email" type="email" placeholder="you@company.com" autocomplete="email" aria-describedby="newsletterMessage" required>
+              <button type="submit" aria-label="Subscribe to the newsletter"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+            <p class="newsletter__msg" id="newsletterMessage" role="status"></p>
+          </form>
+          <div class="footer__contact">
+            <a href="mailto:hello@stackly.in">hello@stackly.in</a>
+            <a href="tel:+919876543210">+91 98765 43210</a>
+            <span>Pune Â· Bengaluru Â· Remote</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Â© <span id="year">2026</span> Stackly Â· PankajUX India. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="404.html">Privacy</a>
+          <a href="404.html">Terms</a>
+          <a href="404.html">Sitemap</a>
+        </div>
+        <p class="footer__made"><span aria-hidden="true"></span> Made with care in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" id="toTop" href="#top" aria-label="Back to top">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </a>
+
+  <script src="js/home.js" defer></script>
+  <script src="js/pages.js" defer></script>
+</body>
+</html>
+
