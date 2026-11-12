@@ -19,7 +19,7 @@ button { font: inherit; }
 
 .dashboard-sidebar { position: fixed; z-index: 10; inset: 0 auto 0 0; display: flex; width: 250px; flex-direction: column; padding: 28px 17px 18px; border-right: 1px solid var(--dash-line); background: #fff; }
 .dashboard-brand { display: flex; min-height: 55px; align-items: center; gap: 12px; padding: 0 12px 19px; border-bottom: 1px solid #f0f2f6; text-decoration: none; }
-.dashboard-brand img { display: block; width: 117px; height: auto; object-fit: contain; }
+.dashboard-brand img { display: block; width: 117px; height: auto; object-fit: contain; /* Recolor the flat orange logo (#FF5A1F) to the dashboard rose #E11D48 */ filter: brightness(0) saturate(100%) invert(68%) sepia(62%) saturate(3041%) hue-rotate(305deg) brightness(0.69) contrast(1.99); }
 .dashboard-brand span { margin-top: 3px; color: #929db0; font-size: 10px; font-weight: 500; }
 .sidebar-label { padding: 28px 12px 11px; color: #a4adbc; font-size: 10px; font-weight: 700; letter-spacing: 1.15px; }
 .sidebar-nav { display: grid; gap: 5px; }
