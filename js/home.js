@@ -66,10 +66,13 @@
 
     if (mobileNav) {
       mobileNav.classList.toggle("is-open", open);
+      mobileNav.setAttribute("aria-hidden", String(!open));
     }
   }
 
   if (menuToggle && mobileNav) {
+    mobileNav.setAttribute("aria-hidden", "true");
+
     menuToggle.addEventListener("click", function () {
       setNav(!navOpen);
     });
@@ -88,8 +91,9 @@
     });
 
     document.addEventListener("click", function (event) {
-      if (!navOpen || !header) return;
-      if (!header.contains(event.target)) setNav(false);
+      const navContainer = header || menuToggle.closest(".site-mobile-header");
+      if (!navOpen || !navContainer) return;
+      if (!navContainer.contains(event.target)) setNav(false);
     });
 
     const desktopQuery = window.matchMedia("(min-width: 1025px)");

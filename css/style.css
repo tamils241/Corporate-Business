@@ -84,3 +84,5 @@ body{background:var(--panel)}a{color:inherit}
 .form-message[data-state="error"]{color:#d71932}
 @media(max-width:760px){.form-row{margin-top:4px;margin-bottom:20px}}
 @media(max-width:390px){.form-row{flex-direction:column;align-items:flex-start;gap:10px}}
+@media(max-width:760px){.visual-panel{height:40vh;min-height:340px}.form-panel{padding-top:36px}}
+@media(max-width:390px){.visual-panel{min-height:320px}}
